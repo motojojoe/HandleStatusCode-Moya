@@ -16,12 +16,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // For example : if this view controller is rootViewController
+        subscribeLogoutIfNeed()
     }
 
     @IBAction func sendRequest(_ sender: Any) {
         viewModel.getProfile()
     }
 
+    private func subscribeLogoutIfNeed() {
+        UserManager.shareInstance.logoutIfNeed.subscribe { value in
+            if let isLogout = value.element, isLogout == true {
+                self.showAlert()
+            }
+            }.disposed(by: disposeBag)
+    }
+    
+    private func showAlert() {
+        let alertVC = UIAlertController(title: "Session Expire", message: "Please retry to login agian", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertVC.addAction(action)
+        present(alertVC, animated: true, completion: nil)
+    }
 }
 
