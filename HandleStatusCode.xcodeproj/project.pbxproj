@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59C98C2B27227C528D721338 /* Pods_HandleStatusCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486A2150806BADAD859C7DD /* Pods_HandleStatusCode.framework */; };
 		60BD2F0C21158BE4007803BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD2F0B21158BE4007803BF /* AppDelegate.swift */; };
 		60BD2F0E21158BE4007803BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD2F0D21158BE4007803BF /* ViewController.swift */; };
 		60BD2F1121158BE4007803BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BD2F0F21158BE4007803BF /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		60BD2F1221158BE7007803BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60BD2F1521158BE7007803BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60BD2F1721158BE7007803BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A486A2150806BADAD859C7DD /* Pods_HandleStatusCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandleStatusCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B2FA79BCA1B95065B2F02A /* Pods-HandleStatusCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandleStatusCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode.debug.xcconfig"; sourceTree = "<group>"; };
+		D050EBD95A2400217F02954E /* Pods-HandleStatusCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandleStatusCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C98C2B27227C528D721338 /* Pods_HandleStatusCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48341529D583BBA9FD6BC988 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7B2FA79BCA1B95065B2F02A /* Pods-HandleStatusCode.debug.xcconfig */,
+				D050EBD95A2400217F02954E /* Pods-HandleStatusCode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5544C7E12405DC98923CF7CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A486A2150806BADAD859C7DD /* Pods_HandleStatusCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60BD2EFF21158BE3007803BF = {
 			isa = PBXGroup;
 			children = (
 				60BD2F0A21158BE3007803BF /* HandleStatusCode */,
 				60BD2F0921158BE3007803BF /* Products */,
+				48341529D583BBA9FD6BC988 /* Pods */,
+				5544C7E12405DC98923CF7CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60BD2F1A21158BE7007803BF /* Build configuration list for PBXNativeTarget "HandleStatusCode" */;
 			buildPhases = (
+				9D633D57B6CC2D9C0236FC80 /* [CP] Check Pods Manifest.lock */,
 				60BD2F0421158BE3007803BF /* Sources */,
 				60BD2F0521158BE3007803BF /* Frameworks */,
 				60BD2F0621158BE3007803BF /* Resources */,
+				561E1C8DF8E9F6D0088EEAB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		561E1C8DF8E9F6D0088EEAB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D633D57B6CC2D9C0236FC80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandleStatusCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60BD2F0421158BE3007803BF /* Sources */ = {
@@ -213,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -278,11 +349,13 @@
 		};
 		60BD2F1B21158BE7007803BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B2FA79BCA1B95065B2F02A /* Pods-HandleStatusCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JYE4863HKW;
 				INFOPLIST_FILE = HandleStatusCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +369,13 @@
 		};
 		60BD2F1C21158BE7007803BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D050EBD95A2400217F02954E /* Pods-HandleStatusCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JYE4863HKW;
 				INFOPLIST_FILE = HandleStatusCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
