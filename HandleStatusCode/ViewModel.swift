@@ -20,7 +20,6 @@ class ViewModel {
     }()
     
     func getProfile() {
-        
         provider.request(.profile(id: "1234")) { result in
             switch result {
             case .success(let value):
@@ -32,7 +31,6 @@ class ViewModel {
                 }
             }
         }
-        
     }
     
     func getProfileRX() {

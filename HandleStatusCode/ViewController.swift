@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
-
+    
+    let viewModel = ViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendRequest(_ sender: Any) {
-        
+        viewModel.getProfile()
     }
 
 }
