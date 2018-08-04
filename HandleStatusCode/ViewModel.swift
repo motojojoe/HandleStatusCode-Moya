@@ -16,6 +16,7 @@ class ViewModel {
     
     lazy var provider: MoyaProvider<UserService> = {
         let provider = MoyaProvider<UserService>()
+        provider.manager.retrier = RetrierHandler()
         return provider
     }()
     
