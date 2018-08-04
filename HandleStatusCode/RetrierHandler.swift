@@ -13,7 +13,8 @@ class RetrierHandler: RequestRetrier {
     func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
         if let response = request.task?.response as? HTTPURLResponse {
             if response.statusCode == 401 {
-                // TODO: handle unauthorized
+                // example handle unauthorized
+                UserManager.shareInstance.clearSession()
             }
         }
         completion(false, 0.0)
