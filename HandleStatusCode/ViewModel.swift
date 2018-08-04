@@ -27,7 +27,7 @@ class ViewModel {
                 print(value.data)
             case .failure(let error):
                 if let response = error.response {
-                    print("error status code : " + String(response.statusCode))
+                    print("error status code : \(response.statusCode)")
                     // TODO: handle the error
                 }
             }
@@ -37,11 +37,11 @@ class ViewModel {
     func getProfileRX() {
         provider.rx.request(.profile(id: "1234"))
             .subscribe(onSuccess: { reponse in
-                print(String(data: reponse.data, encoding: String.Encoding.utf8)!)
+                print(reponse.data)
             }, onError: { error in
                 let moyaError = error as! MoyaError
                 if let response = moyaError.response {
-                    print("error status code : " + String(response.statusCode))
+                    print("error status code : \(response.statusCode)")
                 }
             }).disposed(by: disposeBag)
     }
