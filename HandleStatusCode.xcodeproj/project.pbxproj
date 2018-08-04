@@ -14,6 +14,7 @@
 		60BD2F1321158BE7007803BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BD2F1221158BE7007803BF /* Assets.xcassets */; };
 		60BD2F1621158BE7007803BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BD2F1421158BE7007803BF /* LaunchScreen.storyboard */; };
 		60BD2F2021159483007803BF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD2F1F21159483007803BF /* UserService.swift */; };
+		60BD2F22211594D2007803BF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD2F21211594D2007803BF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		60BD2F1521158BE7007803BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60BD2F1721158BE7007803BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60BD2F1F21159483007803BF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		60BD2F21211594D2007803BF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A486A2150806BADAD859C7DD /* Pods_HandleStatusCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandleStatusCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B2FA79BCA1B95065B2F02A /* Pods-HandleStatusCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandleStatusCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode.debug.xcconfig"; sourceTree = "<group>"; };
 		D050EBD95A2400217F02954E /* Pods-HandleStatusCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandleStatusCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandleStatusCode/Pods-HandleStatusCode.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				60BD2F1421158BE7007803BF /* LaunchScreen.storyboard */,
 				60BD2F1721158BE7007803BF /* Info.plist */,
 				60BD2F1F21159483007803BF /* UserService.swift */,
+				60BD2F21211594D2007803BF /* ViewModel.swift */,
 			);
 			path = HandleStatusCode;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				60BD2F0E21158BE4007803BF /* ViewController.swift in Sources */,
 				60BD2F0C21158BE4007803BF /* AppDelegate.swift in Sources */,
+				60BD2F22211594D2007803BF /* ViewModel.swift in Sources */,
 				60BD2F2021159483007803BF /* UserService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
